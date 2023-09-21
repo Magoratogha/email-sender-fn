@@ -28,7 +28,7 @@ export const sendMail = onRequest(
 					<strong>E-mail:</strong> ${request.body.email}  <br/>
 					<strong>Message:</strong> ${request.body.message}`,
 				});
-				response.send('OK');
+				response.status(200).send();
 			} catch (error) {
 				response.status(500).send(error);
 			}
